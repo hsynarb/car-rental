@@ -1,0 +1,13 @@
+.DropDown {
+  .dropDownEnter {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+  }
+  .dropDownEnterActive {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+  }
+}

@@ -1,0 +1,12 @@
+.QuickReserve {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 767px) {
+  .brderBottom {
+    border-bottom: 1px solid lab(91.6229 -0.159115 -2.26791);
+  }
+}

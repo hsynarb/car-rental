@@ -1,103 +1,108 @@
 import Image from "next/image";
+import PageScreen from "./ui/pageScreen/pageScreen";
+import Button from "./ui/button/button";
+import QuickReserve from "./ui/quickReserve/quickReserve";
+import CarCard from "./ui/carCard/carCard";
+import Icon from "./ui/icon/icon";
+import classNames from "classnames";
+import ReserveGuide from "./ui/reserveGuide/reserveGuide";
 
 export default function Home() {
+  const cars = [
+    {
+      imgSrc: "/landcruise-2016.png",
+      title: "تویوتا کرولا",
+      model: 2020,
+      dailyPrice: 500000,
+      monthlyPrice: 12000000,
+      gaurantee: 200,
+    },
+  ];
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <PageScreen childrenPosition="center" src="/image-header.png">
+        <div className="flex gap-1 md:flex-col md:gap-4">
+          <p className="text-[#d79c10] font-bold text-xl md:text-5xl text-secondary-100">
+            اُتـــو رِنت؛ سریع،
+          </p>
+          <p className="text-[#d79c10] font-bold text-xl md:text-5xl">
+            آسان و به صرفه
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <p className="md:text-xl mt-2">
+          سرویس دهنده رزرو خودرو در ایران در کمترین زمان ممکن!{" "}
+        </p>
+        <div className="mt-4 flex gap-4">
+          <Button
+            shape="filled"
+            borderRadius="md"
+            variant="secondary"
+            className="font-bold text-sm px-3 md:px-6 py-2"
+          >
+            رزرو آسان خودرو
+          </Button>
+          <Button
+            shape="outlined"
+            borderRadius="md"
+            variant="secondary"
+            className="font-bold text-sm px-3 md:px-6 py-2"
+          >
+            تماس با ما
+          </Button>
+        </div>
+      </PageScreen>
+      <QuickReserve />
+      <div className="grid grid-cols-2 md:grid-cols-3 md:gap-6 w-4/5 mx-auto mb-6">
+        <div className="flex gap-2 md:col-start-2">
+          <Button
+            shape="filled"
+            variant="primary"
+            borderRadius="md"
+            className="px-4 py-2 text-sm w-full"
+          >
+            پرطرفدار
+          </Button>
+          <Button
+            shape="outlined"
+            variant="primary"
+            borderRadius="md"
+            className="px-4 py-2 text-sm w-full"
+          >
+            پرطرفدار
+          </Button>
+          <Button
+            shape="outlined"
+            variant="primary"
+            borderRadius="md"
+            className="px-4 py-2 text-sm w-full"
+          >
+            پرطرفدار
+          </Button>
+        </div>
+        <div className="flex col-span-1 justify-end items-center">
+          <div className="flex gap-2 items-center">
+            <span className="text-sm md:text-lg font-semibold">مشاهده همه</span>
+            <Icon
+              src="/arrow-left-simple.svg"
+              className="w-[16px] md:w-[24px]"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className={classNames(
+          "grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 md:gap-6",
+          "w-4/5 mx-auto"
+        )}
+      >
+        <CarCard {...cars[0]} />
+        <CarCard {...cars[0]} />
+        <CarCard {...cars[0]} />
+        <CarCard {...cars[0]} />
+        <CarCard {...cars[0]} />
+        <CarCard {...cars[0]} />
+      </div>
+      <ReserveGuide />
+    </>
   );
 }

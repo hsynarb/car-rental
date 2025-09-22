@@ -1,0 +1,34 @@
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #194bf0;
+}
+
+.Button--filledPrimary {
+  background-color: #194bf0;
+  color: #ffffff;
+}
+.Button--outlinedPrimary {
+  background-color: transparent;
+  color: #194bf0;
+  border: 1px solid #194bf0;
+}
+.Button--filledSecondary {
+  background-color: #fdb713;
+  color: #0c0c0c;
+}
+.Button--outlinedSecondary {
+  background-color: transparent;
+  color: #fdb713;
+  border: 1px solid #fdb713;
+}
+.Button--filledDesabled {
+  background-color: #f3f3f3;
+  color: #c2c2c2;
+}
+.Button--outlinedDesabled {
+  background-color: transparent;
+  color: #c2c2c2;
+  border: 1px solid #c2c2c2;
+}

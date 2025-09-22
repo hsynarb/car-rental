@@ -1,0 +1,92 @@
+import { text } from "stream/consumers";
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./public/**/*.{js,ts,jsx,tsx}",
+    "./styles/**/*.{js,ts,jsx,tsx}",
+    "./utils/**/*.{js,ts,jsx,tsx}",
+    "./lib/**/*.{js,ts,jsx,tsx}",
+    "./hooks/**/*.{js,ts,jsx,tsx}",
+    "./context/**/*.{js,ts,jsx,tsx}",
+    "./features/**/*.{js,ts,jsx,tsx}",
+    "./widgets/**/*.{js,ts,jsx,tsx}",
+    "./layouts/**/*.{js,ts,jsx,tsx}",
+    "./assets/**/*.{js,ts,jsx,tsx}",
+  ],
+
+  theme: {
+    extend: {
+      colors: {
+        beauty: "#1DA1F2",
+        primary: "#194BF0",
+        secondary: {
+          "100": "#FDB713",
+        },
+        accent: "#657786",
+        background: "#F5F8FA",
+        border: "#E1E8ED",
+      },
+      textColor: {
+        primary: "#194BF0",
+        secondary: "#657786",
+        accent: "#1DA1F2",
+      },
+      fontFamily: {
+        sans: ["var(--font-estedad)", "sans-serif"],
+      },
+      fontSize: {
+        xs: ["0.75rem", { lineHeight: "1rem" }],
+        sm: ["0.875rem", { lineHeight: "1.25rem" }],
+        base: ["1rem", { lineHeight: "1.5rem" }],
+        lg: ["1.125rem", { lineHeight: "1.75rem" }],
+        xl: ["1.25rem", { lineHeight: "1.75rem" }],
+        "2xl": ["1.5rem", { lineHeight: "2rem" }],
+        "3xl": ["1.875rem", { lineHeight: "2.25rem" }],
+        "4xl": ["2.25rem", { lineHeight: "2.5rem" }],
+        "5xl": ["2.75rem", { lineHeight: "2.75rem" }],
+        "6xl": ["3.75rem", { lineHeight: "1.2" }],
+        "7xl": ["4.5rem", { lineHeight: "1.2" }],
+        "8xl": ["6rem", { lineHeight: "1.2" }],
+        "9xl": ["8rem", { lineHeight: "1.2" }],
+      },
+      spacing: {
+        px: "1px",
+        "0": "0",
+        "0.5": "0.125rem",
+        "1": "0.25rem",
+        "1.5": "0.375rem",
+        "2": "0.5rem",
+        "2.5": "0.625rem",
+        "3": "0.75rem",
+        "3.5": "0.875rem",
+        "4": "1rem",
+        "5": "1.25rem",
+        "6": "1.5rem",
+        "7": "1.75rem",
+        "8": "2rem",
+        "9": "2.25rem",
+        "10": "2.5rem",
+        "11": "2.75rem",
+        "12": "3rem",
+        "14": "3.5rem",
+        "16": "4rem",
+        "20": "5rem",
+      },
+      borderRadius: {
+        none: "0",
+        sm: "0.125rem",
+        DEFAULT: "0.25rem",
+        md: "0.375rem",
+        lg: "0.5rem",
+        xl: "0.75rem",
+        "2xl": "1rem",
+      },
+    },
+  },
+  plugins: [require("@tailwindcss/forms")],
+};
+export default config;
