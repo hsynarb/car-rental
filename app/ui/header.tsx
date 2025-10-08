@@ -9,6 +9,7 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { redirect } from "next/navigation";
+import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -104,25 +105,39 @@ export default function Header() {
             </div>
             <ul className={classNames("flex flex-col gap-4 p-4")}>
               <li>
-                <a href="/" className={`hover:underline`}>
-                  {headerConstants.reserveCar}
-                </a>
+                <Link
+                  href={"/"}
+                  children={headerConstants.reserveCar}
+                  className="hover:underline"
+                />
               </li>
               <li>
-                <a href="/cars" className="hover:underline">
-                  {headerConstants.ourServices}
-                </a>
-              </li>
-              <li>{headerConstants.blog}</li>
-              <li>
-                <a href="/about" className="hover:underline">
-                  {headerConstants.aboutUs}
-                </a>
+                <Link
+                  href={"/cars"}
+                  children={headerConstants.ourServices}
+                  className="hover:underline"
+                />
               </li>
               <li>
-                <a href="/contact" className="hover:underline">
-                  {headerConstants.contactUs}
-                </a>
+                <Link
+                  href={"/blog"}
+                  children={headerConstants.blog}
+                  className="hover:underline"
+                />
+              </li>
+              <li>
+                <Link
+                  href={"/about-us"}
+                  children={headerConstants.aboutUs}
+                  className="hover:underline"
+                />
+              </li>
+              <li>
+                <Link
+                  href={"/contact-us"}
+                  children={headerConstants.contactUs}
+                  className="hover:underline"
+                />
               </li>
             </ul>
           </div>
@@ -160,25 +175,39 @@ export default function Header() {
           </div>
           <ul className="hidden md:flex md:gap-10">
             <li>
-              <a href="/" className={`hover:underline`}>
-                {headerConstants.reserveCar}
-              </a>
+              <Link
+                href={"/"}
+                children={headerConstants.reserveCar}
+                className="hover:underline"
+              />
             </li>
             <li>
-              <a href="/cars" className="hover:underline">
-                {headerConstants.ourServices}
-              </a>
-            </li>
-            <li>{headerConstants.blog}</li>
-            <li>
-              <a href="/about" className="hover:underline">
-                {headerConstants.aboutUs}
-              </a>
+              <Link
+                href={"/cars"}
+                children={headerConstants.ourServices}
+                className="hover:underline"
+              />
             </li>
             <li>
-              <a href="/contact" className="hover:underline">
-                {headerConstants.contactUs}
-              </a>
+              <Link
+                href={"/blog"}
+                children={headerConstants.blog}
+                className="hover:underline"
+              />
+            </li>
+            <li>
+              <Link
+                href={"/about-us"}
+                children={headerConstants.aboutUs}
+                className="hover:underline"
+              />
+            </li>
+            <li>
+              <Link
+                href={"/contact-us"}
+                children={headerConstants.contactUs}
+                className="hover:underline"
+              />
             </li>
           </ul>
           <Button

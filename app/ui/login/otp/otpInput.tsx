@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { ChangeEvent, ChangeEventHandler, RefObject, useState } from "react";
+import { ChangeEventHandler, RefObject, useState } from "react";
 
 interface InputProps {
   onChange: ChangeEventHandler;

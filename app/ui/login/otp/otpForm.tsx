@@ -6,9 +6,10 @@ import { sendOtp, PhoneState, OtpState } from "@/app/lib/actions";
 
 interface OtpFormProps {
   setStep: (step: "phone" | "otp") => void;
+  phone: string;
 }
 
-export default function OtpForm({ setStep }: OtpFormProps) {
+export default function OtpForm({ setStep, phone }: OtpFormProps) {
   const initialOtpState: OtpState = { error: {} };
   const [otpState, otpFormAction] = useActionState(sendOtp, initialOtpState);
 
@@ -23,6 +24,7 @@ export default function OtpForm({ setStep }: OtpFormProps) {
           {otpState.error?.otp?.[0]}
         </p>
       )}
+      <input type="text" name="phone" value={phone} hidden />
       <div className="flex justify-between w-full mb-4 text-sm text-[#194BF0]">
         <CountDown />
         <span className="cursor-pointer" onClick={() => setStep("phone")}>

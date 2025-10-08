@@ -2,7 +2,7 @@
 import { redirect } from "next/navigation";
 import { z } from "zod";
 
-const LoginFormSchemsTel = z.object({
+const TelFormSchems = z.object({
   phone: z
     .string()
     .min(11, "شماره موبایل باید ۱۱ رقم باشد.")
@@ -22,7 +22,7 @@ export type OtpState = {
 };
 
 export const sendPhone = async (prevState: PhoneState, formData: FormData) => {
-  const validateFields = LoginFormSchemsTel.safeParse({
+  const validateFields = TelFormSchems.safeParse({
     phone: formData.get("phone"),
   });
   if (!validateFields.success) {
@@ -44,6 +44,8 @@ export const sendOtp = async (prevState: OtpState, formData: FormData) => {
     String(formData.get("o4") ?? "") +
     String(formData.get("o5") ?? "");
   console.log({ otp });
+  const phone = formData.get("phone");
+  console.log({ phone });
   const validateFields = OtpFormSchema.safeParse({
     otp,
   });

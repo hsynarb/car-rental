@@ -7,6 +7,7 @@ import OtpForm from "@/app/ui/login/otp/otpForm";
 
 export default function Page() {
   const [step, setStep] = useState<"phone" | "otp">("phone");
+  const [phone, setPhone] = useState("");
   return (
     <div className="my-30 flex justify-center">
       <div className="flex bg-white rounded-lg">
@@ -39,8 +40,10 @@ export default function Page() {
             <p className="mb-4 text-sm">
               {"کد تایید به شماره موبایلی که وارد می‌کنید، ارسال خواهد شد."}
             </p>
-            {step === "phone" && <PhoneForm setStep={setStep} />}
-            {step === "otp" && <OtpForm setStep={setStep} />}
+            {step === "phone" && (
+              <PhoneForm setStep={setStep} setPhone={setPhone} />
+            )}
+            {step === "otp" && <OtpForm setStep={setStep} phone={phone} />}
           </div>
         </div>{" "}
         <Image

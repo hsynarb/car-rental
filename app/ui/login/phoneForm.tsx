@@ -7,10 +7,12 @@ import Button from "@/app/ui/button/button";
 
 interface PhoneFormProps {
   setStep: (step: "phone" | "otp") => void;
+  setPhone: (phone: string) => void;
 }
 
-export default function PhoneForm({ setStep }: PhoneFormProps) {
+export default function PhoneForm({ setStep, setPhone }: PhoneFormProps) {
   const [checked, setChecked] = useState(false);
+  const [inputValue, setInputValue] = useState("");
   const initialPhoneState: PhoneState = { error: {}, step: "phone" };
   const [phoneState, phoneFormAction] = useActionState(
     sendPhone,
@@ -35,6 +37,11 @@ export default function PhoneForm({ setStep }: PhoneFormProps) {
             placeholder="9********"
             name="phone"
             className={"focus:outline-none"}
+            value={inputValue}
+            onChange={(e) => {
+              setInputValue(e.target.value);
+              setPhone(inputValue);
+            }}
           />
         </div>
         <div className="flex gap-2 border-r border-gray-300 px-2">

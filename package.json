@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.10",
+    "bcrypt": "^6.0.0",
     "classnames": "^2.5.1",
     "framer-motion": "^12.23.12",
     "next": "15.4.4",
+    "next-auth": "5.0.0-beta.29",
+    "postgres": "^3.4.7",
     "react": "19.1.0",
     "react-date-object": "^2.1.9",
     "react-dom": "19.1.0",
@@ -23,6 +26,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/bcrypt": "^6.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
