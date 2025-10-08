@@ -3,10 +3,6 @@ import Image from "next/image";
 import Styles from "./header.module.scss";
 import classNames from "classnames";
 import Button from "./button/button";
-import { url } from "inspector";
-import PageScreen from "./pageScreen/pageScreen";
-import { useMediaQuery } from "@/hooks/useMediaQuery";
-import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { redirect } from "next/navigation";
 import Link from "next/link";
@@ -14,22 +10,22 @@ import Link from "next/link";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const sideBarVariants = {
-    open: {
-      x: 0,
-      transition: {
-        stiffness: 100,
-        damping: 30,
-      },
-    },
-    closed: {
-      x: "-100%",
-      transition: {
-        stiffness: 100,
-        damping: 30,
-      },
-    },
-  };
+  // const sideBarVariants = {
+  //   open: {
+  //     x: 0,
+  //     transition: {
+  //       stiffness: 100,
+  //       damping: 30,
+  //     },
+  //   },
+  //   closed: {
+  //     x: "-100%",
+  //     transition: {
+  //       stiffness: 100,
+  //       damping: 30,
+  //     },
+  //   },
+  // };
 
   const headerConstants = {
     reserveCar: "رزرو خودرو",
@@ -185,12 +181,6 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link
-                href={"/contact-us"}
-                className="hover:underline"
-                children={headerConstants.contactUs}
-              />
-
               <Link href={"/contact-us"} className="hover:underline">
                 {headerConstants.contactUs}
               </Link>

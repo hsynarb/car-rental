@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Button from "@/app/ui/button/button";
 import Styles from "./pageScreen.module.scss";
 import classNames from "classnames";
 

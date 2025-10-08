@@ -1,4 +1,3 @@
-import { text } from "stream/consumers";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -87,6 +86,5 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("@tailwindcss/forms")],
 };
 export default config;

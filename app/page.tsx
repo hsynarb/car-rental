@@ -1,4 +1,3 @@
-import Image from "next/image";
 import PageScreen from "./ui/pageScreen/pageScreen";
 import Button from "./ui/button/button";
 import QuickReserve from "./ui/quickReserve/quickReserve";

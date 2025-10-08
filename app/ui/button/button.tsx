@@ -28,7 +28,6 @@ export default function Button({
   iconPosition = "right",
   disabled = false,
   loading = false,
-  ...props
 }: Props) {
   return (
     <button
