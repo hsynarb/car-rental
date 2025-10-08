@@ -105,39 +105,29 @@ export default function Header() {
             </div>
             <ul className={classNames("flex flex-col gap-4 p-4")}>
               <li>
-                <Link
-                  href={"/"}
-                  children={headerConstants.reserveCar}
-                  className="hover:underline"
-                />
+                <Link href={"/"} className="hover:underline">
+                  {headerConstants.reserveCar}
+                </Link>
               </li>
               <li>
-                <Link
-                  href={"/cars"}
-                  children={headerConstants.ourServices}
-                  className="hover:underline"
-                />
+                <Link href={"/cars"} className="hover:underline">
+                  {headerConstants.ourServices}
+                </Link>
               </li>
               <li>
-                <Link
-                  href={"/blog"}
-                  children={headerConstants.blog}
-                  className="hover:underline"
-                />
+                <Link href={"/blog"} className="hover:underline">
+                  {headerConstants.blog}
+                </Link>
               </li>
               <li>
-                <Link
-                  href={"/about-us"}
-                  children={headerConstants.aboutUs}
-                  className="hover:underline"
-                />
+                <Link href={"/about-us"} className="hover:underline">
+                  {headerConstants.aboutUs}
+                </Link>
               </li>
               <li>
-                <Link
-                  href={"/contact-us"}
-                  children={headerConstants.contactUs}
-                  className="hover:underline"
-                />
+                <Link href={"/contact-us"} className="hover:underline">
+                  {headerConstants.contactUs}
+                </Link>
               </li>
             </ul>
           </div>
@@ -175,39 +165,29 @@ export default function Header() {
           </div>
           <ul className="hidden md:flex md:gap-10">
             <li>
-              <Link
-                href={"/"}
-                children={headerConstants.reserveCar}
-                className="hover:underline"
-              />
+              <Link href={"/"} className="hover:underline">
+                {headerConstants.reserveCar}
+              </Link>
             </li>
             <li>
-              <Link
-                href={"/cars"}
-                children={headerConstants.ourServices}
-                className="hover:underline"
-              />
+              <Link href={"/cars"} className="hover:underline">
+                {headerConstants.ourServices}
+              </Link>
             </li>
             <li>
-              <Link
-                href={"/blog"}
-                children={headerConstants.blog}
-                className="hover:underline"
-              />
+              <Link href={"/blog"} className="hover:underline">
+                {headerConstants.blog}
+              </Link>
             </li>
             <li>
-              <Link
-                href={"/about-us"}
-                children={headerConstants.aboutUs}
-                className="hover:underline"
-              />
+              <Link href={"/about-us"} className="hover:underline">
+                {headerConstants.aboutUs}
+              </Link>
             </li>
             <li>
-              <Link
-                href={"/contact-us"}
-                children={headerConstants.contactUs}
-                className="hover:underline"
-              />
+              <Link href={"/contact-us"} className="hover:underline">
+                {headerConstants.contactUs}
+              </Link>
             </li>
           </ul>
           <Button
