@@ -2,8 +2,8 @@
 import classNames from "classnames";
 import Image from "next/image";
 import { useState } from "react";
-import PhoneForm from "@/app/ui/login/phoneForm";
-import OtpForm from "@/app/ui/login/otp/otpForm";
+import PhoneForm from "@/ui/login/phoneForm";
+import OtpForm from "@/ui/login/otp/otpForm";
 
 export default function Page() {
   const [step, setStep] = useState<"phone" | "otp">("phone");

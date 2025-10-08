@@ -1,10 +1,10 @@
-import PageScreen from "./ui/pageScreen/pageScreen";
-import Button from "./ui/button/button";
-import QuickReserve from "./ui/quickReserve/quickReserve";
-import CarCard from "./ui/carCard/carCard";
-import Icon from "./ui/icon/icon";
+import PageScreen from "../ui/pageScreen/pageScreen";
+import Button from "../ui/button/button";
+import QuickReserve from "../ui/quickReserve/quickReserve";
+import CarCard from "../ui/carCard/carCard";
+import Icon from "../ui/icon/icon";
 import classNames from "classnames";
-import ReserveGuide from "./ui/reserveGuide/reserveGuide";
+import ReserveGuide from "../ui/reserveGuide/reserveGuide";
 
 export default function Home() {
   const cars = [

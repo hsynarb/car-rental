@@ -1,10 +1,10 @@
 "use client";
-import Button from "@/app/ui/button/button";
+import Button from "@/ui/button/button";
 import classNames from "classnames";
 import Image from "next/image";
 import Styles from "./quickReserve.module.scss";
-import DropDown from "@/app/ui/form/dropDown/dropDown";
-import DatePicker from "@/app/ui/form/datePicker/datePicker";
+import DropDown from "@/ui/form/dropDown/dropDown";
+import DatePicker from "@/ui/form/datePicker/datePicker";
 
 export default function QuickReserve() {
   return (

@@ -3,7 +3,7 @@ import { PhoneState, sendPhone } from "@/app/lib/actions";
 import classNames from "classnames";
 import { useActionState, useEffect, useState } from "react";
 import Image from "next/image";
-import Button from "@/app/ui/button/button";
+import Button from "@/ui/button/button";
 
 interface PhoneFormProps {
   setStep: (step: "phone" | "otp") => void;

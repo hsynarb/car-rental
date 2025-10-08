@@ -1,4 +1,4 @@
-import Icon from "@/app/ui/icon/icon";
+import Icon from "@/ui/icon/icon";
 import Styles from "./button.module.scss";
 import classNames from "classnames";
 

@@ -1,4 +1,4 @@
-import Icon from "@/app/ui/icon/icon";
+import Icon from "@/ui/icon/icon";
 import Image from "next/image";
 export default function ReserveGuide() {
   return (

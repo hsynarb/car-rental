@@ -1,7 +1,7 @@
 import { useActionState } from "react";
-import Button from "@/app/ui/button/button";
-import CountDown from "@/app/ui/countDown";
-import OtpWrapper from "@/app/ui/login/otp/otpWrapper";
+import Button from "@/ui/button/button";
+import CountDown from "@/ui/countDown";
+import OtpWrapper from "@/ui/login/otp/otpWrapper";
 import { sendOtp, OtpState } from "@/app/lib/actions";
 
 interface OtpFormProps {

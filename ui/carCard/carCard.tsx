@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "@/app/ui/button/button";
+import Button from "@/ui/button/button";
 import classNames from "classnames";
 
 interface CarCardProps {
