@@ -185,6 +185,12 @@ export default function Header() {
               </Link>
             </li>
             <li>
+              <Link
+                href={"/contact-us"}
+                className="hover:underline"
+                children={headerConstants.contactUs}
+              />
+
               <Link href={"/contact-us"} className="hover:underline">
                 {headerConstants.contactUs}
               </Link>

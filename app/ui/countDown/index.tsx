@@ -4,7 +4,7 @@ export default function CountDown() {
   const [minutes, setMinutes] = useState(2);
   const [seconds, setSeconds] = useState(0);
   useEffect(() => {
-    const myInterval = setInterval(() => {
+    let myInterval = setInterval(() => {
       if (seconds > 0) {
         setSeconds(seconds - 1);
       }
